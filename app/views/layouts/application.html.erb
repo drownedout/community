@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CommuniTy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<header class="main_header">
+	
+	<a href="#" class="main_logo"><%= image_tag("#") %></a>
+
+	<div class="search_bar">
+		<form action="#0">
+			<input type="search" placeholder="search">
+		</form>
+	</div>
+
+	<nav class="main_nav">
+		<ul class="top_nav">
+			<li><%= link_to "Tour", root_path %></li>
+			<li><%= link_to "Support", root_path %></li>
+			<li class="login account">
+				<a href="#"><%= image_tag("#") %>Account</a>
+
+				<ul>
+					<li><a href="#">My Account</li>
+					<!-- List More -->
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+</header>
+
+<%= yield %>
+
+</body>
+</html>
