@@ -1,0 +1,62 @@
+<header class="main_header clearfix">
+	
+	<%= link_to image_tag("main_logo.png"), root_path, class: "main_logo" %>
+
+	<nav class="main_nav">
+		<ul class="top_nav">
+			<li><%= link_to "Tour", root_path %></li>
+			<li><%= link_to "Support", root_path %></li>
+			
+		</ul>
+	</nav>
+	
+</header>
+
+<div class="community_banner clearfix">
+	<div class="wrapper">
+		<div class="city_info_left clearfix">
+			<div class="row">
+				<%= image_tag("pointer.png", class: "pointer_icon") %>
+				<h1 class="community_title"><%= @community.name %></h1>
+			</div>
+			<p>37°52′18″N 122°16′22″W</p>
+			<p>200 Members</p>
+		</div>
+		<div class="city_info_right clearfix">
+			<div class="weather_block">
+				<%= image_tag('Thermostat.png', class: "weather_icon") %>
+				<p>73</p>
+			</div>
+			<div class="weather_block">
+				<%= image_tag('sun.png', class: "weather_icon") %>
+				<p>Sunny</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="selection_bar">
+	<div class="wrapper">
+		<li><a class="active" id="neighborhood" href="#">Neighborhood</a></li>
+		<li><a id="events" href="#">Events</a></li>
+		<li><a id="members" href="#">Members</a></li>
+		<li><a id="about" href="#">About</a></li>
+		<li><%= link_to "Join", root_path, class: "join_button" %></li>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="neighborhood_body active">
+		<%= render 'communities/partial/neighborhood' %>
+	</div>
+	<div class="event_body">
+		<%= render 'communities/partial/event' %>
+	</div>
+	<div class="member_body">
+		<%= render 'communities/partial/member' %>
+	</div>
+	<div class="about_body">
+		<%= render 'communities/partial/about' %>
+	</div>
+</div>
+
+<script type="text/javascript" src="community_show.js"></script>

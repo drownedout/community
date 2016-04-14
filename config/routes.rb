@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  resources :communities
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

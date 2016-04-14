@@ -1,3 +1,14 @@
+<header class="main_home_header clearfix">	
+	<a href="#" class="main_logo"><%= image_tag("main_logo.png") %></a>
+	<nav class="main_nav">
+		<ul class="top_nav">
+			<li><%= link_to "Tour", root_path %></li>
+			<li><%= link_to "Support", root_path %></li>
+			<li><%= link_to "Sign Up", root_path %></li>
+			<li><%= link_to "Login", root_path %></li>
+	</nav>
+</header>
+
 <div class="banner">
 	<div class="wrapper_skinny">
 		<div class="outerboxdiv">
@@ -30,3 +41,31 @@
 		<%= link_to "See More Communities", root_path, class: "see_more button_red" %>
 	</div>
 </div>
+<script type="text/javascript">	
+
+	$(function() {
+	  	var banner = $('.banner');
+	  	var backgrounds = ["url(<%= asset_path('banner.jpg') %>)", "url(<%= asset_path('banner2.jpg') %>)", "url(<%= asset_path('banner3.jpg') %>)"];
+		var current = 0;
+
+		var styles = {
+	  		'background-repeat': 'no-repeat',
+			'background-size': 'cover',
+			'background-position': 'center center'
+	 	 };
+
+	function nextBackground() {
+	  banner.css(
+	   'background',
+	    backgrounds[current = ++current % backgrounds.length]
+	 )
+	  banner.css(styles);
+
+	 setTimeout(nextBackground, 7000);
+	 }
+	 setTimeout(nextBackground, 7000);
+	   banner.css('background', backgrounds[0])
+	   banner.css(styles);
+	 }); 
+
+</script>
