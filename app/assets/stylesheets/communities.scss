@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/** Icon **/
+/** Banner **/
+
 .community_banner {
 	background-image: url('berkeley.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center 70%;
 }
+
+/** Banner Contents **/
 
 .city_info_left {
 	float: left;
@@ -50,6 +53,8 @@
 		}
 	}
 }
+
+/** Menu Bar **/
 
 .selection_bar {
 	background-color: #ffffff;
@@ -95,6 +100,59 @@
 		}
 	}
 }
+
+/** Show Body **/
+
+.community_show_main {
+	margin: 2rem 0;
+	h1 {
+		text-align:center;
+	}
+}
+
+/** Event Block **/
+
+.event_block {
+	background-color: #ffffff;
+	.event_image {
+		padding: 2rem 1rem;
+		width: 25%;
+		float: left;
+		margin-right: 2rem;
+	}
+	.event_description_block {
+		float:left;
+		width: 60%;
+		h1 {
+			font-size: 2.5rem;
+			border-bottom: 1px solid black;
+		}
+	}
+}
+
+/** Member Block **/
+
+.member_block {
+	background: #ffffff;
+	border-radius: 5%;
+	float: left;
+	margin: 0 1% 2.5rem 1%;
+	width: 30%;
+	text-align: center;
+	.member_image{
+		padding: 1rem .5rem;
+		border-radius: 50%;
+		width:50%;
+	}
+	.member_info{
+		h1, p{
+			margin: 0 0 1rem 0;
+		}
+	}
+}
+
+
+/** For the Javascripts **/
 
 .neighborhood_body{
 	display: none;

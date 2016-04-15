@@ -25,7 +25,7 @@
 		<div class="city_info_right clearfix">
 			<div class="weather_block">
 				<%= image_tag('Thermostat.png', class: "weather_icon") %>
-				<p>73</p>
+				<p>73°F</p>
 			</div>
 			<div class="weather_block">
 				<%= image_tag('sun.png', class: "weather_icon") %>
@@ -45,18 +45,16 @@
 </div>
 
 <div class="wrapper">
-	<div class="neighborhood_body active">
+	<div class="neighborhood_body community_show_main active">
 		<%= render 'communities/partial/neighborhood' %>
 	</div>
-	<div class="event_body">
+	<div class="event_body community_show_main">
 		<%= render 'communities/partial/event' %>
 	</div>
-	<div class="member_body">
+	<div class="member_body community_show_main">
 		<%= render 'communities/partial/member' %>
 	</div>
 	<div class="about_body">
 		<%= render 'communities/partial/about' %>
 	</div>
 </div>
-
-<script type="text/javascript" src="community_show.js"></script>
