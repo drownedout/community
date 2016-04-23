@@ -57,7 +57,6 @@ body {
 }
 
 .button {
-	color: #ffffff;
 	text-decoration: none;
 	font-size: 1rem;
 	padding: 1rem 2rem;
@@ -71,6 +70,7 @@ body {
 
 .button_red {
 	background: #c45858;
+	color: #ffffff;
 	&:hover{
 		background: lighten(#c45858, 7.5%);
 	}
@@ -78,6 +78,7 @@ body {
 
 .button_green {
 	background: #578e8e;
+	color: #ffffff;
 	&:hover{
 		background: lighten(#578e8e, 7.5%);
 	}
@@ -140,6 +141,9 @@ body {
 				display: block;
 				color: #ffffff;
 				text-decoration: none;
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 				&:hover{
 	    			color: #FFEAC1;
 	    		}
@@ -148,6 +152,7 @@ body {
 				display: inline-block;
 	    		margin-right: 1em;
 	    		height: 100%;
+	    		color: #ffffff;
 	    		img {
 	    			  position: absolute;
 					  left: 1.8em;

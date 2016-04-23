@@ -8,36 +8,30 @@
 </head>
 <body>
 
-<!-- <header class="main_header clearfix">
+<% if user_signed_in? %>
+<header class="main_header clearfix">
 	
-	<a href="#" class="main_logo"><%= image_tag("main_logo.png") %></a>
-
-	<div class="search_bar">
-		<form action="#0">
-			<input type="search" placeholder="search">
-		</form>
-	</div> 
+	<%= link_to image_tag("main_logo.png"), root_path, class: "main_logo" %>
 
 	<nav class="main_nav">
 		<ul class="top_nav">
 			<li><%= link_to "Tour", root_path %></li>
 			<li><%= link_to "Support", root_path %></li>
-			<li class="account">
-				<a href="#"><%= image_tag("#")%>Account</a>
-
-				<ul>
-					<li><a href="#">My Account</li>
-					List More
-				</ul> 
-			</li>
+			<li><%= link_to "My Account", root_path %></li>
 		</ul>
 	</nav>
 	
-</header> -->
+</header>
+
+<% else %>
+<% end %>
+
 
 <%= yield %>
 
 <footer class="footer">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 </footer>
 
 </body>

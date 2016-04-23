@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 /** Banner **/
 
 .community_banner {
@@ -148,6 +149,62 @@
 		h1, p{
 			margin: 0 0 1rem 0;
 		}
+	}
+}
+
+/** Sign Up Form **/
+
+.form_body {
+	margin: 3rem auto;
+	border-radius: 2%;
+	background-color: #ffffff;
+	width: 45%;
+	border-top: 8px solid #578e8e;
+	padding: 1rem;
+	.form_title {
+		font-size: 2rem;
+		border-bottom: 1px solid #000000;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+		padding: .5rem 0 1rem 0;
+	}
+	.field_body {
+		width: 75%;
+		margin: 1rem auto;
+		.label{
+			font-weight: 500;
+		}
+		.input{
+			width: 100%;
+			margin: 1rem 0;
+			padding: .25rem .25rem;
+			-webkit-transition-duration: .4s;
+		    -moz-transition-duration: .4s;
+		    -o-transition-duration: .4s;
+		    transition-duration: .4s;
+		}
+		.actions {
+			margin: 2rem auto;
+			text-align: center;
+			.button {
+				padding: .5rem 4rem;
+				margin: 0 auto;
+				&:hover{
+					pointer: hand;
+				}
+			}
+		}
+	}
+}
+
+/** Devise Links **/
+
+.devise-links {
+	text-decoration: none;
+	color: #000000;
+	&:hover {
+		color: #578e8e;
 	}
 }
 
