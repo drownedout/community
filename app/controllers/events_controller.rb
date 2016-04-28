@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-
+	before_action :find_event, only: [:show, :edit, :update, :destroy]
 	before_action :set_community
 
 	def index
@@ -11,6 +11,12 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(event_params)
+		@event.community_id = @community.id
+		if @event.save
+			redirect_to @community
+		else
+			render 'new'
+		end
 	end
 
 	def show
@@ -20,6 +26,11 @@ class EventsController < ApplicationController
 	end
 
 	def update
+		if @event.update(event_params)
+			redirect_to @community
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
@@ -28,7 +39,7 @@ class EventsController < ApplicationController
 	private
 
 	def event_params
-		params.require(:event).permit(:title, :description, :date, :event_image)
+		params.require(:event).permit(:title, :description, :date, :event_image, :neighborhood_id)
 	end
 
 	def set_community

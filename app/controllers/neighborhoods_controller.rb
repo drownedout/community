@@ -11,6 +11,8 @@ class NeighborhoodsController < ApplicationController
 
 	def create
 		@neighborhood = Neighborhood.new(neighborhood_params)
+		@neighborhood.community_id = @community.id
+
 		if @neighborhood.save
 			redirect_to @neighborhood
 		else
@@ -25,7 +27,7 @@ class NeighborhoodsController < ApplicationController
 	end
 
 	def update
-		if @neighborhood.update
+		if @neighborhood.update(neighborhood_params)
 			redirect_to @neighborhood
 		else
 			render 'edit'
@@ -38,7 +40,7 @@ class NeighborhoodsController < ApplicationController
 	private
 
 	def neighborhood_params
-		params.require(:neighborhood).permit(:name, :description, :profile_picture, :banner_image)
+		params.require(:neighborhood).permit(:name, :description, :profile_picture, :banner_image, :community_id)
 	end
 
 	def set_community

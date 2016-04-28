@@ -183,6 +183,10 @@
 			    -o-transition-duration: .4s;
 			    transition-duration: .4s;
 			}
+			select{
+				margin: .75rem 0;
+				width: 35%;
+			}
 		}	
 		.actions {
 			margin: 2rem auto;
