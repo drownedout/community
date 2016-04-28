@@ -1,11 +1,11 @@
-<div class="community_banner clearfix">
+<div class="community_banner clearfix" style="background-image: url(<%= @community.banner_image.url() %>)">
 	<div class="wrapper">
 		<div class="city_info_left clearfix">
 			<div class="row">
 				<%= image_tag("pointer.png", class: "pointer_icon") %>
 				<h1 class="community_title"><%= @community.name %></h1>
 			</div>
-			<p>37°52′18″N 122°16′22″W</p>
+			<p><%= @community.location %></p>
 			<p>200 Members</p>
 		</div>
 		<div class="city_info_right clearfix">

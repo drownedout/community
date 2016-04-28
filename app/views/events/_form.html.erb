@@ -1,0 +1,23 @@
+<%= form_for ([@community, @event]) do |f| %>
+	<div class="field_body">
+		<div class="field">
+			<%= f.label :title, "Title", class: "label" %>
+			<%= f.text_field :title, class: "input" %>
+		</div>
+		<div class="field">
+			<%= f.label :date, "Date", class: "label" %>
+			<%= f.date_field :date, class: "input" %>
+		</div>
+		<div class="field">
+			<%= f.label :description, "Description", class: "label" %>
+			<%= f.text_field :description, class: "input" %>
+		</div>
+		<div class="field">
+			<%= f.label :event_image, "Event Image", class: "label" %>
+			<%= f.file_field :event_image, class: "input" %>
+		</div>
+		<div class="actions">
+			<%= f.submit "Submit", class: "button button_red" %>
+		</div>
+	</div>
+<% end %>

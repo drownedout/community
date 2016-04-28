@@ -76,11 +76,27 @@ body {
 	}
 }
 
+.button_blue {
+	background: #435683;
+	color: #ffffff;
+	&:hover{
+		background: lighten(#435683, 7.5%);
+	}
+}
+
 .button_green {
 	background: #578e8e;
 	color: #ffffff;
 	&:hover{
 		background: lighten(#578e8e, 7.5%);
+	}
+}
+
+.button_orange {
+	background: #C48959;
+	color: #ffffff;
+	&:hover{
+		background: lighten(#C48959, 7.5%);
 	}
 }
 

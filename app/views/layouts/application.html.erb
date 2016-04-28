@@ -17,13 +17,24 @@
 		<ul class="top_nav">
 			<li><%= link_to "Tour", root_path %></li>
 			<li><%= link_to "Support", root_path %></li>
-			<li><%= link_to "My Account", root_path %></li>
+			<li><%= link_to "My Account", edit_user_registration_path %></li>
+			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 		</ul>
 	</nav>
 	
 </header>
 
 <% else %>
+<header class="main_home_header clearfix">	
+	<a href="#" class="main_logo"><%= link_to image_tag("main_logo.png"), root_path, class: "main_logo" %></a>
+	<nav class="main_nav">
+		<ul class="top_nav">
+			<li><%= link_to "Tour", root_path %></li>
+			<li><%= link_to "Support", root_path %></li>
+			<li><%= link_to "Sign Up", new_user_registration_path %></li>
+			<li><%= link_to "Login", new_user_session_path %></li>
+	</nav>
+</header>
 <% end %>
 
 

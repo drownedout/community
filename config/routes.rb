@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
-  resources :communities
+  resources :communities do
+    resources :events
+    resources :neighborhoods
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

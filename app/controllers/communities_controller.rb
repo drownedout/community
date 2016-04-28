@@ -11,6 +11,11 @@ class CommunitiesController < ApplicationController
 
 	def create
 		@community = Community.new(community_params)
+		if @community.save
+			redirect_to @community
+		else
+			render 'new'
+		end
 	end
 
 	def show
@@ -23,6 +28,11 @@ class CommunitiesController < ApplicationController
 	end
 
 	def update
+		if @community.update(community_params)
+			redirect_to @community
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
@@ -35,6 +45,6 @@ class CommunitiesController < ApplicationController
 	end
 
 	def community_params
-		params.require(:community).permit(:name)
+		params.require(:community).permit(:name, :location, :banner_image)
 	end
 end

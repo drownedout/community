@@ -1,18 +1,3 @@
-<% if user_signed_in? %>
-
-
-<% else %>
-<header class="main_home_header clearfix">	
-	<a href="#" class="main_logo"><%= image_tag("main_logo.png") %></a>
-	<nav class="main_nav">
-		<ul class="top_nav">
-			<li><%= link_to "Tour", root_path %></li>
-			<li><%= link_to "Support", root_path %></li>
-			<li><%= link_to "Sign Up", new_user_registration_path %></li>
-			<li><%= link_to "Login", new_user_session_path %></li>
-	</nav>
-</header>
-
 <div class="banner">
 	<div class="wrapper_skinny">
 		<div class="outerboxdiv">
@@ -45,8 +30,6 @@
 		<%= link_to "See More Communities", root_path, class: "see_more button_red" %>
 	</div>
 </div>
-
-<% end %>
 
 <script type="text/javascript">	
 

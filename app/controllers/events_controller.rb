@@ -1,11 +1,16 @@
 class EventsController < ApplicationController
+
+	before_action :set_community
+
 	def index
 	end
 
 	def new
+		@event = Event.new
 	end
 
 	def create
+		@event = Event.new(event_params)
 	end
 
 	def show
@@ -22,8 +27,12 @@ class EventsController < ApplicationController
 
 	private
 
-	def events_params
-		params.require(:event).permit()
+	def event_params
+		params.require(:event).permit(:title, :description, :date, :event_image)
+	end
+
+	def set_community
+		@community = Community.find(params[:community_id])
 	end
 
 	def find_event
