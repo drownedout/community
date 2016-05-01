@@ -45,6 +45,6 @@ class CommunitiesController < ApplicationController
 	end
 
 	def community_params
-		params.require(:community).permit(:name, :location, :banner_image)
+		params.require(:community).permit(:name, :location, :banner_image, :thumbnail_image, :state)
 	end
 end

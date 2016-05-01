@@ -12,11 +12,13 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'kaminari', '~> 0.16.3'
 gem 'searchkick', '~> 1.2', '>= 1.2.1'
-gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 group :development do

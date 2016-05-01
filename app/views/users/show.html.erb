@@ -1,0 +1,40 @@
+<div class="user_banner clearfix" style="background-image: url(<%= @user.banner_image.url() %>)">
+	<div class="wrapper">
+		<div class="user_info_left clearfix">
+			<div class="row">
+				<%= image_tag("user.jpeg", class: "profile_picture") %>
+				<h1 class="user_name"><%= @user.firstname %> <%= @user.lastname %></h1>
+			</div>
+			<p class="friends">200 Friends</p>
+		</div>
+	</div>
+</div>
+<div class="selection_bar">
+	<div class="wrapper">
+		<li><a id="feed" href="#">My Feed</a></li>
+		<li><a id="communities" href="#">My Communities</a></li>
+		<li><a id="events" href="#">My Events</a></li>
+		<li><a id="friends" href="#">My Friends</a></li>
+		<li><%= link_to "Add Friend", @user, class: "friend_button" %></li>
+	</div>
+</div>
+<div class="wrapper_skinny">
+	<div class="user_bio">
+		<h2>About Me</h2>
+		<p><%= @user.bio %></p>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="feed_body show_main active">
+		<%= render 'users/partial/feed' %>
+	</div>
+	<div class="community_body show_main active">
+		<%= render 'users/partial/feed' %>
+	</div>
+	<div class="community_body show_main active">
+		<%= render 'users/partial/feed' %>
+	</div>
+	<div class="community_body show_main active">
+		<%= render 'users/partial/feed' %>
+	</div>
+</div>

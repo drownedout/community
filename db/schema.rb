@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428185701) do
+ActiveRecord::Schema.define(version: 20160430223454) do
 
   create_table "communities", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160428185701) do
     t.integer  "thumbnail_image_file_size"
     t.datetime "thumbnail_image_updated_at"
     t.string   "location"
+    t.string   "state"
   end
 
   create_table "events", force: :cascade do |t|
@@ -77,6 +78,11 @@ ActiveRecord::Schema.define(version: 20160428185701) do
     t.string   "profile_picture_content_type"
     t.integer  "profile_picture_file_size"
     t.datetime "profile_picture_updated_at"
+    t.string   "banner_image_file_name"
+    t.string   "banner_image_content_type"
+    t.integer  "banner_image_file_size"
+    t.datetime "banner_image_updated_at"
+    t.text     "bio"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

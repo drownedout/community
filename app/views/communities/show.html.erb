@@ -3,7 +3,7 @@
 		<div class="city_info_left clearfix">
 			<div class="row">
 				<%= image_tag("pointer.png", class: "pointer_icon") %>
-				<h1 class="community_title"><%= @community.name %></h1>
+				<h1 class="community_title"><%= @community.name %>, <%= @community.state %></h1>
 			</div>
 			<p><%= @community.location %></p>
 			<p>200 Members</p>
@@ -31,16 +31,16 @@
 </div>
 
 <div class="wrapper">
-	<div class="neighborhood_body community_show_main active">
+	<div class="neighborhood_body show_main active">
 		<%= render 'communities/partial/neighborhood' %>
 	</div>
-	<div class="event_body community_show_main">
+	<div class="event_body show_main">
 		<%= render 'communities/partial/event' %>
 	</div>
-	<div class="member_body community_show_main">
+	<div class="member_body show_main">
 		<%= render 'communities/partial/member' %>
 	</div>
-	<div class="about_body">
+	<div class="about_body show_main">
 		<%= render 'communities/partial/about' %>
 	</div>
 </div>
